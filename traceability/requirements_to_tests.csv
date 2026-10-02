@@ -1,0 +1,15 @@
+User Story,Requirement,Representative Test Cases,Observed Result,Related Defects
+US-G-001,Browse jobs without authentication,TC-VJP-001,PASS,
+US-G-002,Search and filter jobs,TC-VJP-002; TC-VJP-003; TC-VJP-029; TC-VJP-030,PASS / FAIL / observation,BUG-VJP-010
+US-G-003,View job details,TC-VJP-004,PASS,BUG-VJP-010
+US-V-001,Register as Veteran,TC-VJP-005; TC-VJP-006; TC-VJP-008; TC-VJP-009; TC-VJP-010,Mixed,BUG-VJP-012; BUG-VJP-014; BUG-VJP-015
+US-V-002,Sign in to account,TC-VJP-011; TC-VJP-012,Mixed,BUG-VJP-002; BUG-VJP-018
+US-V-003,Create Veteran Profile,TC-VJP-013; TC-VJP-014; TC-VJP-015,Mixed,BUG-VJP-006; BUG-VJP-008; BUG-VJP-009; BUG-VJP-021
+US-V-006,Search Jobs,TC-VJP-016; TC-VJP-017; TC-VJP-018,PASS,BUG-VJP-023
+US-V-008,Apply to Job,TC-VJP-019; TC-VJP-020,Mixed,BUG-VJP-003; BUG-VJP-004
+US-R-001,Register as Recruiter,TC-VJP-021,PASS,
+US-R-004,Create Job Posting,TC-VJP-022,PASS,BUG-VJP-007
+US-R-006,View Job Applicants,TC-VJP-023; TC-VJP-026,Mixed,BUG-VJP-008
+US-R-007,Browse Published Veteran Profiles,TC-VJP-024,PASS,BUG-VJP-003
+US-R-008,Request Contact Access,TC-VJP-025,PASS,
+US-R-010,View Recruiter Dashboard,TC-VJP-028,PASS,BUG-VJP-019
