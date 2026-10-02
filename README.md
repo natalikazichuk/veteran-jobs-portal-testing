@@ -1,40 +1,21 @@
 # VeteranJobPortal — QA Portfolio
 
-A manual QA portfolio project based on testing of **VeteranJobPortal**, a web platform connecting veterans with employers.
+A manual QA portfolio project based on testing of VeteranJobPortal, a web platform connecting veterans with employers.
 
-**Live project:** https://veteranjobportal.pages.dev/
+Live project: https://veteranjobportal.pages.dev/
 
 ## QA scope
 
-Testing covered the main user journeys for:
+Testing covered Guest/Public, Veteran and Recruiter journeys.
 
-- Guest / public user
-- Veteran
-- Recruiter
+Key areas: registration and authentication; veteran profile creation/publication; recruiter profile and job posting; job search and filters; applications; recruiter application management; contact access; navigation and role-based access; UI/UX and validation; negative and edge cases; basic DevTools/API investigation.
 
-Key areas:
-
-- Registration and authentication
-- Veteran profile creation and publication
-- Recruiter profile and job posting
-- Job search and filters
-- Job application workflow
-- Recruiter application management
-- Contact-access workflow
-- Navigation and role-based access
-- UI/UX and validation
-- Negative and edge-case scenarios
-- Basic API/DevTools investigation where applicable
-
-The functional requirements and acceptance criteria were taken from the project's **User Stories and Testing Scenarios** document. The project contains separate user stories for Guest, Veteran and Recruiter roles and testing scenarios for authentication, profiles, job posting, search, applications, contact access, moderation, UI/UX, performance and edge cases.
+The functional requirements and acceptance criteria were taken from the project's User Stories and Testing Scenarios document.
 
 ## Testing approach
 
-I used a combination of:
-
 - Requirements / acceptance-criteria analysis
-- Functional testing
-- Positive and negative testing
+- Functional, positive and negative testing
 - Boundary-value and validation checks
 - Exploratory testing
 - Role-based testing
@@ -46,11 +27,9 @@ I used a combination of:
 
 ## Test results
 
-### Functional testing cycle — Build 2.0
-
 | Metric | Result |
 |---|---:|
-| Test checks | 90 |
+| Functional checks | 90 |
 | PASS | 75 |
 | FAIL | 13 |
 | SKIPPED | 0 |
@@ -59,105 +38,29 @@ I used a combination of:
 | FAIL rate | 14.44% |
 | Defects documented | 12 |
 
-These figures are taken from the functional testing checklist included in the project materials.
-
-### Registration-focused test cycle
-
-| Metric | Result |
-|---|---:|
-| Checks | 58 |
-| PASS | 41 |
-| FAIL | 9 |
-| BLOCKED | 2 |
-| SKIPPED | 6 |
-| PASS rate | 70.69% |
-| FAIL + BLOCKED | 18.97% |
-| Defects found | 9 |
-
-This cycle demonstrates deeper validation of registration, email and password fields, authentication and profile completion.
+Registration-focused cycle: 58 checks, 41 PASS, 9 FAIL, 6 SKIPPED, 2 BLOCKED, 70.69% PASS, 18.97% FAIL + BLOCKED, 9 defects found.
 
 ## Defect examples
 
-The project contains documented defects including:
+Documented defects include password visibility state, invalid-password messaging, application visibility, incomplete-profile application submission, missing onboarding guidance, phone validation, applicant data display, sector terminology, required-field indicators, role-dependent CTA states, navigation issues and search/list consistency observations.
 
-- Incorrect password visibility icon state
-- Incorrect login error message
-- Application visibility problem for veterans with unpublished profiles
-- Ability to apply with an incomplete profile
-- Missing first-login onboarding guidance
-- Invalid phone-number values accepted
-- Incorrect surname display in recruiter application lists
-- Non-obvious navigation terminology
-- Missing required-field indicators
-- Missing validation/error messages
-- Incorrect role-dependent button states
-- Duplicate navigation actions
-- Empty UI block after the footer
-- Search/list consistency issue reported from DevTools investigation
-
-See [`bug-reports/VJP_bug_report_normalized.csv`](bug-reports/VJP_bug_report_normalized.csv).
+See bug-reports/VJP_bug_report_normalized.csv.
 
 ## Traceability
 
-The portfolio connects requirements/user stories with representative tests and observed defects.
+Requirements/user stories are linked with representative tests and observed defects.
 
-See [`traceability/requirements_to_tests.csv`](traceability/requirements_to_tests.csv).
+See traceability/requirements_to_tests.csv.
 
-Examples of covered requirements:
-
-- `US-G-001` — Browse jobs without authentication
-- `US-G-002` — Search and filter jobs
-- `US-V-001` — Register as Veteran
-- `US-V-002` — Sign in
-- `US-V-003` — Create Veteran Profile
-- `US-V-006` — Search Jobs
-- `US-V-007` — View Job Details
-- `US-V-008` — Apply to Job
-- `US-R-001` — Register as Recruiter
-- `US-R-004` — Create Job Posting
-- `US-R-006` — View Job Applicants
-- `US-R-007` — Browse Published Veteran Profiles
-- `US-R-008` — Request Contact Access
+Covered examples: US-G-001, US-G-002, US-V-001, US-V-002, US-V-003, US-V-006, US-V-008, US-R-001, US-R-004, US-R-006, US-R-007, US-R-008.
 
 ## Repository structure
 
-```text
-VJP_QA_GitHub_Portfolio/
-├── README.md
-├── docs/
-│   ├── TEST_PLAN.md
-│   ├── TESTING_SUMMARY.md
-│   └── QA_APPROACH.md
-├── test-cases/
-│   └── VJP_selected_test_cases.csv
-├── bug-reports/
-│   └── VJP_bug_report_normalized.csv
-├── traceability/
-│   └── requirements_to_tests.csv
-└── evidence/
-    ├── search_job_field.jpg
-    ├── categories_sectors.jpg
-    ├── profile_required_fields.jpg
-    ├── signup_validation.jpg
-    ├── dashboard_navigation.jpg
-    └── vacancy_company_link.jpg
-```
+docs/ — test plan, testing summary, QA approach and follow-up items
+test-cases/ — selected test cases
+bug-reports/ — normalized defect report
+traceability/ — requirements-to-tests matrix
 
-## Evidence
+## Portfolio note
 
-The `evidence/` folder contains selected screenshots showing real testing observations.
-
-Screenshots were selected to demonstrate:
-
-- Search UI
-- Category/sector navigation
-- Required-field indicators
-- Registration validation
-- Dashboard navigation
-- Vacancy/company interaction
-
-## Notes
-
-This repository is a portfolio representation of QA work. Source spreadsheets/PDFs are retained separately as working artifacts; this repository contains a cleaned, recruiter-friendly presentation of the work.
-
-The source materials contain some inconsistent dates/labels and duplicate bug IDs across different report sections. The portfolio files preserve the observed testing results while normalizing the presentation for GitHub.
+This repository is a recruiter-friendly presentation of QA work. Source materials contain some inconsistent dates/labels and duplicate bug IDs across different report sections; the portfolio normalizes presentation without inventing missing test results.
