@@ -1,0 +1,31 @@
+Test Case ID,User Story,Role,Title,Preconditions,Steps,Expected Result,Observed Status
+TC-VJP-001,US-G-001,Guest,Browse jobs,Guest is not authenticated,Open landing page and jobs listing,Active job postings are visible,PASS
+TC-VJP-002,US-G-002,Guest,Search jobs by keyword,Jobs exist,Enter a valid job keyword,Relevant jobs are returned,PASS
+TC-VJP-003,US-G-002,Guest,Search with empty input,Jobs page is open,Submit empty search,System handles empty search without error,PASS
+TC-VJP-004,US-G-003,Guest,Open job details,At least one job exists,Open a job card,Job details page opens with key information,PASS
+TC-VJP-005,US-V-001,Veteran,Open registration,User is logged out,Open Sign Up and select Veteran,Registration form opens and Veteran role is selected,PASS
+TC-VJP-006,US-V-001,Veteran,Register with valid data,Registration form is open,Enter valid email/password and submit,Account is created successfully,PASS
+TC-VJP-007,US-V-001,Veteran,Register with existing email,Email already exists,Submit registration with existing email,Clear duplicate-email error is displayed,PASS
+TC-VJP-008,US-V-001,Veteran,Submit empty registration form,Registration form is open,Leave required fields empty and inspect CTA,Registration cannot be submitted,FAIL
+TC-VJP-009,US-V-001,Veteran,Validate invalid email,Registration form is open,Enter invalid email formats,Validation message is displayed,FAIL
+TC-VJP-010,US-V-001,Veteran,Validate password,Registration form is open,Enter weak/invalid password,Password validation prevents submission,FAIL
+TC-VJP-011,US-V-002,Veteran,Login with valid credentials,Registered account exists,Enter valid credentials and sign in,User reaches the correct role area,PASS
+TC-VJP-012,US-V-002,Veteran,Login with invalid password,Registered account exists,Enter valid email and wrong password,Correct authentication error is displayed,FAIL
+TC-VJP-013,US-V-003,Veteran,Create profile,Veteran is authenticated,Complete profile fields and save,Profile is saved,PASS
+TC-VJP-014,US-V-003,Veteran,Validate profile required fields,Profile form is open,Leave required profile fields empty,Required-field errors/markers are shown,FAIL
+TC-VJP-015,US-V-003,Veteran,Validate phone field,Profile form is open,Enter invalid phone values,Invalid phone values are rejected,FAIL
+TC-VJP-016,US-V-006,Veteran,Search jobs by Ukrainian keyword,Jobs exist,Search with Ukrainian text,Relevant jobs are returned,PASS
+TC-VJP-017,US-V-006,Veteran,Search jobs by English keyword,Jobs exist,Search with English text,Relevant jobs are returned,PASS
+TC-VJP-018,US-V-006,Veteran,Search by first letters,Jobs exist,Enter a prefix of a job title,Relevant matches are returned,PASS
+TC-VJP-019,US-V-008,Veteran,Apply with valid profile,Published/complete profile exists,Open job and apply,Application is created,PASS
+TC-VJP-020,US-V-008,Veteran,Apply with incomplete profile,Veteran is authenticated with incomplete profile,Attempt to apply,Application is blocked or user is prompted to complete profile,FAIL
+TC-VJP-021,US-R-001,Recruiter,Register as recruiter,User is logged out,Select Recruiter and register,Recruiter account is created,PASS
+TC-VJP-022,US-R-004,Recruiter,Create job posting,Recruiter profile exists,Complete required job fields and submit,Job is created and appears in listings,PASS
+TC-VJP-023,US-R-006,Recruiter,View applicants,A job has applicants,Open applicants for a job,Applicants are listed with correct information,FAIL
+TC-VJP-024,US-R-007,Recruiter,Browse published veteran profiles,Published profiles exist,Open candidates page,Published profiles are visible,PASS
+TC-VJP-025,US-R-008,Recruiter,Request contact access,Candidate profile is visible,Send contact request,Request is created and status is shown,PASS
+TC-VJP-026,US-R-006,Recruiter,Update application status,Applicant exists,Change status to reviewed/accepted/rejected,Status updates successfully,PASS
+TC-VJP-027,US-V-010,Veteran,View dashboard,Veteran is authenticated,Open dashboard,"Profile, applications and opportunities are visible",PASS
+TC-VJP-028,US-R-010,Recruiter,View recruiter dashboard,Recruiter is authenticated,Open dashboard,"Jobs, applicants and actions are visible",PASS
+TC-VJP-029,US-G-002,Guest,Review category/sector navigation,Landing page is open,Open recommended categories and sector navigation,Terminology and navigation are clear and consistent,FAIL
+TC-VJP-030,US-G-002,Guest,Search UI suggestions,Landing page is open,Enter a partial job title in the search field,Relevant suggestions/categories are shown when supported by requirements,NOT RUN / candidate observation
