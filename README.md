@@ -2,7 +2,7 @@
 
 A manual QA portfolio project based on testing of VeteranJobPortal, a web platform connecting veterans with employers.
 
-Live project: https://veteranjobportal.pages.dev/
+Live project: [https://veteran.plus/]
 
 ## QA scope
 
